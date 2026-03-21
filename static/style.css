@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --primary-100:#1F3A5F;
+    --primary-200:#4d648d;
+    --primary-300:#acc2ef;
+    --accent-100:#3D5A80;
+    --accent-200:#cee8ff;
+    --text-100:#FFFFFF;
+    --text-200:#e0e0e0;
+    --bg-100:#0F1C2E;
+    --bg-200:#1f2b3e;
+    --bg-300:#374357;
+      
+}
+
+
+body {
+    background-color: var(--bg-100);
+    color : var(--text-100);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+}
+main {
+    font-family: "Iosevka Charon Mono", sans-serif;
+    font-style: italic;
+    flex-grow: 1;
+    padding: 1rem;
+
+}
+header h1{
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--bg-200);
+}
+
+header{
+    text-align: center;
+    padding: 0.3rem;
+    box-shadow: 5px;
+}
+
+main ul.messages li{
+    background-color: var(--primary-100);
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    list-style: none;
+    width: fit-content;
+    margin: 0.3rem;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-300);
+    padding: 0.3rem;
+    gap: 0.3rem;
+}
+
+form input{
+    flex-grow: 1;
+    border: none;
+    padding: 0.3rem 1rem;
+    background-color: var(--primary-200);
+    border-radius: 1rem;
+}
+
+form button{
+    border: none;
+    padding: 0.3rem 1rem;
+    background-color: var(--primary-200);
+    border-radius: 1rem;
+    cursor: pointer;
+}
