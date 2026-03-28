@@ -44,6 +44,7 @@ header{
     text-align: center;
     padding: 0.3rem;
     box-shadow: 5px;
+    position: relative;
 }
 
 main ul.messages li{
@@ -76,5 +77,16 @@ form button{
     padding: 0.3rem 1rem;
     background-color: var(--primary-200);
     border-radius: 1rem;
+    cursor: pointer;
+}
+
+.auth {
+    position: absolute;
+    top: 0.8rem;
+    right: 2rem;
+    background-color: var(--primary-300);
+    padding: 0.4rem;
+    border-radius: 2rem;
+    border: none;
     cursor: pointer;
 }

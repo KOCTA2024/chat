@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node --watch server.js",
-    "start" : "node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -13,9 +13,12 @@
   },
   "author": "",
   "license": "ISC",
-  "type" : "module",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/KOCTA2024/chat/issues"
   },
-  "homepage": "https://github.com/KOCTA2024/chat#readme"
+  "homepage": "https://github.com/KOCTA2024/chat#readme",
+  "dependencies": {
+    "socket.io": "^4.8.3"
+  }
 }
