@@ -1,3 +1,5 @@
+
+
 const socket = io()
 
 let form = document.querySelector("#form")
@@ -14,10 +16,10 @@ form.addEventListener("submit", (event)=>{
 
 socket.on("message", (data)=>{
     console.log("From server: ", data)
-    addMesage(data)
+    addMessage(data)
 })
 
-function addMesage(message){
+function addMessage(message){
     let messageList = document.querySelector(".messages")
     let messageItem = document.createElement("li")
     messageItem.textContent = `${message.user}: ${message.message}`
@@ -29,3 +31,12 @@ document.querySelector(".auth").addEventListener("click", ()=>{
     let nickname = prompt("Print your nickname", "asfkajfkoiajfioajoiajgaoi;j")
     if(nickname) socket.emit("new_nickname", nickname)
 })
+
+function getMessages(){
+    fetch('/messages').then(res=>res.json()).then(data=>{
+        console.log(data)
+        data.forEach(message => addMessage({user: message.author, message: message.content}))
+    })
+}
+
+getMessages()
