@@ -90,3 +90,26 @@ form button{
     border: none;
     cursor: pointer;
 }
+
+#register {
+    margin-top: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
+
+#registerform{
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#registersubmit{
+    margin: 0.3rem;
+    margin-bottom: 0px;
+}
