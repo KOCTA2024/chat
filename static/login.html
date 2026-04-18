@@ -16,7 +16,6 @@
         <form id="registerform">
             <input type="text" id="logininput" placeholder="Enter your login...">
             <input type="text" id="1stpasswordinput" placeholder="Enter your password...">
-            <input type="text" id="2ndpasswordinput" placeholder="Enter your password again...">
         <button type="submit" id="registersubmit">Send</button>
         </form>
     </div>
@@ -26,21 +25,10 @@
             event.preventDefault()
             let data = {
                 login: event.target["logininput"].value,
-                password: event.target["1stpasswordinput"].value,
-                repeated_password: event.target["2ndpasswordinput"].value
+                password: event.target["1stpasswordinput"].value
             }
             console.log(data)
-            if(data.login.length < 3){
-                alertify.error("login too short")
-                return
-            }
-            if(data.password.length < 5){
-                alertify.error("password too short")
-            }
-            if(data.repeated_password != data.password){
-                alertify.error("password and repeated password mismatch")
-            }
-            fetch("/register",{
+            fetch("/login",{
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
@@ -50,7 +38,7 @@
                 if(res.ok){
                    navigation.navigate("/")
                 }else{
-                    alertify.error("register error")
+                    alertify.error("login error")
                 }
             })
 
