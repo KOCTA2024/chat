@@ -34,8 +34,10 @@
                     "Content-type": "application/json"
                 },
                 body: JSON.stringify(data)
-            }).then(res=>{
+            }).then(async res=>{
                 if(res.ok){
+                    let token = await res.text()
+                    document.cookie = "token=" + token 
                    navigation.navigate("/")
                 }else{
                     alertify.error("login error")
